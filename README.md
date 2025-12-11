@@ -4,6 +4,8 @@
 
 Clone this repository and run `npm install` in the project root.
 
+> **Windows install tip:** npm can occasionally skip Rollup's platform binary, which triggers `Cannot find module @rollup/rollup-win32-x64-msvc` when starting Vite. A small postinstall hook now auto-installs the correct Rollup binary on Windows, but if you still see the error, delete `node_modules` and `package-lock.json` and reinstall (`npm install`).
+
 Then run `npm run dev` to start the dev server and open the URL printed in your terminal to check the App.
 
 This Blits L3 Example App now opens with a JW Player-powered “ChekPlus TV” landing screen. To point the experience at your own JW Player media:
