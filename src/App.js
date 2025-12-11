@@ -19,6 +19,7 @@ import Blits from '@lightningjs/blits'
 
 // Demo pages
 import Portal from './pages/Portal'
+import JwCinema from './pages/JwCinema'
 import Intro from './pages/Intro'
 import Theming from './pages/Theming'
 import Tmdb from './pages/Tmdb'
@@ -81,7 +82,8 @@ export default Blits.Application({
   },
   routes: [
     // Demo routes
-    { path: '/', component: Portal, options: { keepAlive: true } },
+    { path: '/', component: JwCinema, options: { keepAlive: true } },
+    { path: '/legacy', component: Portal, options: { keepAlive: true } },
     // Loading a route via a dynamic import
     {
       path: '/demos/loading',
@@ -197,7 +199,8 @@ export default Blits.Application({
 
 const getSourcePath = (routerPath) => {
   const sourceMap = {
-    '/': 'src/pages/Portal',
+    '/': 'src/pages/JwCinema',
+    '/legacy': 'src/pages/Portal',
     '/demos/loading': 'src/pages/Loading',
     '/demos/intro': 'src/pages/Intro',
     '/demos/theming': 'src/pages/Theming',

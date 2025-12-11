@@ -9,6 +9,7 @@
     "start:test": "NODE_ENV=testing npm run dev",
     "lint": "eslint '**/*.js'",
     "lint:fix": "eslint '**/*.js' --fix",
+    "postinstall": "node scripts/install-rollup-native.js",
     "build": "vite build",
     "build:chrome38": "npm --browser_version=chrome38-48 run build",
     "build:chrome49": "npm --browser_version=chrome49-56 run build",
