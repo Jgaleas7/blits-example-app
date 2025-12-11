@@ -6,9 +6,14 @@ Clone this repository and run `npm install` in the project root.
 
 Then run `npm run dev` to start the dev server and open the URL printed in your terminal to check the App.
 
-This Blits L3 Example App contains a demo of a TMDB integration. Head over to https://developers.themoviedb.org/3/getting-started/introduction to get your own TMDB API key and paste it inside a `.env` file (following the example in `.example.env`). To use your own TMDB API key, you also need to change `VITE_TMDB_BASE_URL` in your `.env` file to `https://api.themoviedb.org/3`.
+This Blits L3 Example App now opens with a JW Player-powered “ChekPlus TV” landing screen. To point the experience at your own JW Player media:
 
-You can also take a look at the [hosted version](http://blits-demo.lightningjs.io) of this App.
+1. Add a `.env` file in the project root.
+2. Populate shelves with `VITE_JWPLAYER_PLAYLISTS`, using the format `Title:playlistId,Another Shelf:playlistId`.
+3. If your playlists require authentication, set `VITE_JWPLAYER_API_TOKEN` with a JW Platform API token.
+4. Override the base URL when needed via `VITE_JWPLAYER_BASE_URL` (defaults to `https://cdn.jwplayer.com`).
+
+The previous TMDB demo is still available under the `/legacy` route. You can also take a look at the [hosted version](http://blits-demo.lightningjs.io) of this App.
 
 ## Visual Regression Test
 
